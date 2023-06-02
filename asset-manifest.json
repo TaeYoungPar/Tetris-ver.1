@@ -1,18 +1,17 @@
 {
   "files": {
     "main.css": "/Tetris-ver.1/static/css/main.46bd8794.css",
-    "main.js": "/Tetris-ver.1/static/js/main.72c9649b.js",
+    "main.js": "/Tetris-ver.1/static/js/main.6374a20c.js",
     "static/js/787.7e64f256.chunk.js": "/Tetris-ver.1/static/js/787.7e64f256.chunk.js",
-    "static/media/MP_엉뚱한 작당모의.mp3": "/Tetris-ver.1/static/media/MP_엉뚱한 작당모의.65d3ba12e70cc360b1bc.mp3",
     "static/media/bg.png": "/Tetris-ver.1/static/media/bg.d63cfd51f1a63591fdd7.png",
     "static/media/Pixel-LCD-7.woff": "/Tetris-ver.1/static/media/Pixel-LCD-7.63d9c15192fdeab6d3a6.woff",
     "index.html": "/Tetris-ver.1/index.html",
     "main.46bd8794.css.map": "/Tetris-ver.1/static/css/main.46bd8794.css.map",
-    "main.72c9649b.js.map": "/Tetris-ver.1/static/js/main.72c9649b.js.map",
+    "main.6374a20c.js.map": "/Tetris-ver.1/static/js/main.6374a20c.js.map",
     "787.7e64f256.chunk.js.map": "/Tetris-ver.1/static/js/787.7e64f256.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.46bd8794.css",
-    "static/js/main.72c9649b.js"
+    "static/js/main.6374a20c.js"
   ]
 }
