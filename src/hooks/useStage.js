@@ -33,8 +33,6 @@ export const useStage = (player,resetPlayer,setGameOver,setPlaying) => {
                 if(value !== 0){
                     // 새로 생성된 블록이 이미 블록으로 쌓인 곳에 있는지 확인
             if (
-                newStage[y + player.pos.y] &&
-                newStage[y + player.pos.y][x + player.pos.x] &&
                 newStage[y + player.pos.y][x + player.pos.x][0] !== 0
               ) {
                 setGameOver(true); // 게임 오버 처리

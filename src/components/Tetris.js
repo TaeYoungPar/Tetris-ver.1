@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState,useEffect,useRef } from "react";
 
 import { createStage, checkCollision } from "../gameHelper";
 
@@ -26,7 +26,7 @@ const Tetris = () => {
     const [stage,setStage,rowsCleared] = useStage(player,resetPlayer,setGameOver,setPlaying);
     const [score,setScore,rows,setRows,level,setLevel] = useGameStatus(rowsCleared)
 
-    
+    const audioxRef = useRef(new Audio("/music/MP_엉뚱한 작당모의.mp3"));
     
     const movePlayer = dir =>{
         if(!checkCollision(player,stage,{x:dir,y:0})){
@@ -44,8 +44,10 @@ const Tetris = () => {
         setRows(0);
         setLevel(0);
         setPlaying(true);
-        
 
+        audioxRef.current.currentTime = 0;
+        audioxRef.current.play();
+        audioxRef.current.loop = true;
     }
    
 
@@ -110,6 +112,23 @@ const Tetris = () => {
             audio.play();
           }
       }, [rows]);
+    
+
+    useEffect(()=>{
+        if(level > 0){
+            const audio = new Audio('/music/level.mp3');
+            audio.play();
+        }
+    },[level])
+
+    useEffect(() => {
+        if (!playing) {
+            audioxRef.current.pause();
+            audioxRef.current.currentTime = 0;
+          }
+      }, [playing]);
+
+     
 
     useInterval(()=>{
         drop();
@@ -133,7 +152,7 @@ const Tetris = () => {
                 )}
                 <StartButton callback={startGame}/>
             </aside>
-            {playing && <BackgroundMusic/>}
+            {/* {playing && <BackgroundMusic/>} */}
             {/* {cleared && <ClearSound/>} */}
             </StyledTetris>
         </StyledTetrisWrapper>
