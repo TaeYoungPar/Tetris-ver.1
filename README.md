@@ -1,6 +1,13 @@
 # Deploy
 https://taeyoungpar.github.io/Tetris-ver.1/
 
+#작동법
+이동: 키보드 좌,우 버튼
+내리기: 키보드 아래 버튼
+회전: 키보드 위 버튼
+재시작: R 버튼
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
